@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    font-family: 'inter', sans-serif;
+}
+
+
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px) {
+
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+        
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}

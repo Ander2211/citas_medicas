@@ -11,7 +11,7 @@
     
         <!----------------------- Main Container -------------------------->
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
-            <!----------------------- Login Container -------------------------->
+            <!----------------------- Register Container -------------------------->
             <div class="row border rounded-5 p-3 bg-white shadow box-area rounded-3">
                 <!--------------------------- Left Box ----------------------------->
                 <div class="col-md-4 rounded d-flex justify-content-center align-items-center flex-column left-box"

@@ -6,8 +6,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon-medilink.png" type="image/x-icon">
+
    
-    <title>Document</title>
+    <title>MEDILINK || Citas en Línea</title>
+
 </head>
 <body style="background-color: #E4F2F1;">
 
@@ -15,7 +19,7 @@
 
   <nav style="background-color: #011526;" class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand text-light" href="#">MEDILINK</a>
+      <a class="navbar-brand text-light" href="http://localhost/citas_medicas/">MEDILINK</a>
       <button style="background-color: white;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,10 +42,10 @@
         <ul class="nav justify-content-end">
 
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="http://localhost/login/login-paciente.php">Inicia Sesión como Paciente</a>
+            <a class="nav-link active text-light" aria-current="page" href="http://localhost/citas_medicas/login.php">Inicia Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="http://localhost/login/login-doctor.php">Inicia Sesión como Doctor</a>
+            <a class="nav-link active text-light" aria-current="page" href="http://localhost/citas_medicas/register.php">Registrate</a>
           </li>
         </ul>
       </div>
@@ -108,7 +112,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <div style="background-color: #D9B391;" class="col border rounded">
+        <div style="background-color: #88d5df;" class="col border rounded">
           <img width="338" height="250" src="img/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg" class="img-fuild rounded mt-2" alt="">
             <h2 class="fs-2">Agenda tu cita a cualquier hora</h2>
             <p class="text-center p-3 fw-semibold">Nuestra amplia red de médicos y especialistas te ayudará a encontrar el horario perfecto para tu cita, busca y agenda a cualquier hora!</p>
@@ -116,7 +120,7 @@
         </div>
       </div>
       <div class="col">
-        <div style="background-color: #D9B391;" class="col border rounded">
+        <div style="background-color: #88d5df;" class="col border rounded">
           <img width="338" height="250" src="img/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg" class="img-fuild rounded mt-2" alt="">
             
           <h2 class="fs-2">¡Encuentra a tu médico mas cercano!</h2>
@@ -125,7 +129,7 @@
         </div>
       </div>
       <div class="col">
-        <div style="background-color: #D9B391;" class="col border rounded">
+        <div style="background-color: #88d5df;" class="col border rounded">
           <img width="338" height="250" src="img/sander-sammy-38Un6Oi5beE-unsplash.jpg" class="img-fuild rounded mt-2" alt="">
             
             <h2 class="fs-2">¡Elige a tu médico de confianza!</h2>

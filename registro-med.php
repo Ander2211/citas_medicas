@@ -28,31 +28,73 @@
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
                             <h2>Bienvenido a MEDILINK</h2>
-                            <p>Por favor, completa tu información para continuar.</p>
+                            <p>Por favor, completa tu perfil para continuar.</p>
                         </div>
-                        <form method="post" action="">
+                        <form method="post" action="controladores/procesar_completar_doctor.php" enctype="multipart/form-data">
+                        <input type="hidden" name="id_credencial" value="<?php echo $_GET['id']; ?>">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nombre Completo" required>
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" name="nombre" placeholder="Nombre" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Número de licencia" required>
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" name="apellido" placeholder="Apellido" required>
                             </div>
                             <div class="input-group mb-3">
-                                <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" name="telefono" placeholder="Telefono" required>
+                            </div>
+                            <label for="date">Selecciona tu fecha de nacimiento</label>
+                            <div class="input-group mb-3">
+                                <input type="date" class="form-control form-control-lg bg-light fs-6" name="fecha_nacimiento" id="date" placeholder="" required>
+                            </div>
+
+                            <label for="genderRadio">Selecciona tu genero</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genero" value="M" id="genderRadio">
+                                <label class="form-check-label" for="genderRadio">
+                                    Masculino
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genero" value="F" id="genderRadio">
+                                <label class="form-check-label" for="genderRadio">
+                                    Femenino
+                                </label>
+                            </div>
+
+                            <label for="">Sube una foto de perfil</label>
+                            <div class="input-group mb-3">
+                                <input type="file" name="foto_perfil" accept="image/*" class="form-control form-control-lg bg-light fs-6" id="foto" required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" name="numero_colegiado" placeholder="Número de licencia" required>
+                            </div>
+
+                            <div class="input-group mb-2">
+                                <div class="mb-3" style="width: 100%;">
+                                    <label for="" class="form-label"></label>
+                                    <textarea class="form-control" name="biografia" id="" rows="5" style="resize:none;" placeholder="Agregue una descripción o biografía" ></textarea>
+                                </div>
+                                
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" name="id_especialidad" required>
                                     <option selected disabled>Selecciona tu especialidad</option>
                                     <option value="1">Médico General</option>
                                     <option value="2">Médico Ortopeda</option>
                                     <option value="3">Médico Pediatra</option>
                                 </select>
                             </div>
+
                             <div class="input-group mb-3">
-                                <input type="tel" class="form-control form-control-lg bg-light fs-6" placeholder="Número de telefono" required>
+                                <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" name="id_hospital" required>
+                                    <option selected disabled>Selecciona tu hospital</option>
+                                    <option value="1">Hospital Zacamil</option>
+                                    <option value="2">ISSS</option>
+                                    <option value="3">MHospital El Salvador</option>
+                                </select>
                             </div>
-                            <label for="date">Selecciona tu fecha de nacimiento</label>
-                            <div class="input-group mb-3">
-                                <input type="date" class="form-control form-control-lg bg-light fs-6" id="date" placeholder="" required>
-                            </div>
-                            <label for="">Ingresa tu dirección</label>
+
+                            <!-- <label for="">Ingresa tu dirección</label>
                             <div class="input-group mb-3">
                                 <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
                                     <option selected disabled>Selecciona tu departamento</option>
@@ -68,28 +110,9 @@
                                     <option value="2">San Salvador centro</option>
                                     <option value="3">San Salvador norte</option>
                                 </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Calle / Local / o referencia" required>
-                            </div>
-                            <label for="">Sube una foto de perfil</label>
-                            <div class="input-group mb-3">
-                                <input type="file" class="form-control form-control-lg bg-light fs-6" id="foto" required>
-                            </div>
+                            </div> -->
                             
-                            <label for="genderRadio">Selecciona tu genero</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="genderRadio">
-                                <label class="form-check-label" for="genderRadio">
-                                    Masculino
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="genderRadio">
-                                <label class="form-check-label" for="genderRadio">
-                                    Femenino
-                                </label>
-                            </div>
+
 
                             <div class="input-group mt-3 justify-content-center">
                                 <button type="submit" class="btn btn-lg w-50 fs-6" style="background-color: #03A6A6; color: #E4F2F1;" >Completar registro</button>

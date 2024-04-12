@@ -27,21 +27,25 @@
                 <div class="col-md-8 right-box ">
                     <div class="row align-items-center">
                         <div class="header-text mb-4">
-                            <h2>Bienvenido a MEDILINK</h2>
+                            <h2>Bienvenido a MEDILINK <?php echo $_GET['id']; ?></h2>
                             <p>Por favor, completa tu información para continuar.</p>
                         </div>
-                        <form method="post" action="">
+                        <form method="post" action="controladores/procesar_completar_paciente.php" enctype="multipart/form-data">
+                            <input type="hidden" name="id_credencial" value="<?php echo $_GET['id']; ?>">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nombre Completo" required>
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nombre" name="nombre" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="tel" class="form-control form-control-lg bg-light fs-6" placeholder="Número de telefono" required>
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Apellido" name="apellido" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="tel" class="form-control form-control-lg bg-light fs-6" placeholder="Número de telefono" name="telefono" required>
                             </div>
                             <label for="date">Selecciona tu fecha de nacimiento</label>
                             <div class="input-group mb-3">
-                                <input type="date" class="form-control form-control-lg bg-light fs-6" id="date" placeholder="" required>
+                                <input type="date" class="form-control form-control-lg bg-light fs-6" id="date" name="fecha_nacimiento" placeholder="" required>
                             </div>
-                            <label for="">Ingresa tu dirección</label>
+                            <!-- <label for="">Ingresa tu dirección</label>
                             <div class="input-group mb-3">
                                 <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
                                     <option selected disabled>Selecciona tu departamento</option>
@@ -56,25 +60,25 @@
                                     <option value="1">San Salvador este</option>
                                     <option value="2">San Salvador centro</option>
                                     <option value="3">San Salvador norte</option>
-                                </select>
+                                </select> -->
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Calle / Local / o referencia" required>
+                                <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Dirección" required>
                             </div>
                             <label for="">Sube una foto de perfil</label>
                             <div class="input-group mb-3">
-                                <input type="file" class="form-control form-control-lg bg-light fs-6" id="foto" required>
+                                <input type="file" name="foto_perfil" accept="image/*" class="form-control form-control-lg bg-light fs-6" id="foto" required>
                             </div>
                             
                             <label for="genderRadio">Selecciona tu genero</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="genderRadio">
+                                <input class="form-check-input" type="radio" name="genero" value="M" id="genderRadio">
                                 <label class="form-check-label" for="genderRadio">
                                     Masculino
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="genderRadio">
+                                <input class="form-check-input" type="radio" name="genero" value="F" id="genderRadio">
                                 <label class="form-check-label" for="genderRadio">
                                     Femenino
                                 </label>

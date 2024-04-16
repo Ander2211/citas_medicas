@@ -9,7 +9,7 @@
 </head>
 <body style="background-color: #E4F2F1;">
     
-        <!----------------------- Main Container -------------------------->
+        <!----------------------- Main Container asass-------------------------->
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
             <!----------------------- Register Container -------------------------->
             <div class="row border rounded-5 p-3 bg-white shadow box-area rounded-3">

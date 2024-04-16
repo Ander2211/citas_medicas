@@ -94,7 +94,7 @@
                                 </select>
                             </div>
 
-                            <!-- <label for="">Ingresa tu dirección</label>
+                            <label for="">Ingresa tu dirección</label>
                             <div class="input-group mb-3">
                                 <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
                                     <option selected disabled>Selecciona tu departamento</option>
@@ -110,7 +110,7 @@
                                     <option value="2">San Salvador centro</option>
                                     <option value="3">San Salvador norte</option>
                                 </select>
-                            </div> -->
+                            </div>
                             
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,22 +45,33 @@
                             <div class="input-group mb-3">
                                 <input type="date" class="form-control form-control-lg bg-light fs-6" id="date" name="fecha_nacimiento" placeholder="" required>
                             </div>
-                            <!-- <label for="">Ingresa tu dirección</label>
+                            <label for="">Ingresa tu dirección</label>
                             <div class="input-group mb-3">
-                                <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
+                                <select name="departamento" id="departamento" class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
                                     <option selected disabled>Selecciona tu departamento</option>
-                                    <option value="1">San Salvador</option>
-                                    <option value="2">Santa Ana</option>
-                                    <option value="3">Ahuachapan</option>
+                                    <?php
+                                    // Consultar la tabla departamentos para obtener los departamentos disponibles
+                                    require_once "controladores/conexion.php"; 
+                                    $sql_departamentos = "SELECT * FROM departamentos";
+                                    $resultado_departamentos = mysqli_query($conexion, $sql_departamentos);
+                                    while ($fila_departamento = mysqli_fetch_assoc($resultado_departamentos)) {
+                                        echo "<option value='{$fila_departamento['id_departamento']}'>{$fila_departamento['nombre_departamento']}</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
                             <div class="input-group mb-3">
-                                <select class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
+                                <select name="municipio" id="municipio" class="form-select form-control-lg bg-light fs-6" id="floatingSelect" required>
                                     <option selected disabled>Selecciona tu municipio</option>
-                                    <option value="1">San Salvador este</option>
-                                    <option value="2">San Salvador centro</option>
-                                    <option value="3">San Salvador norte</option>
-                                </select> -->
+                                    <?php
+                                    // Consultar la tabla municipios para obtener los municipios disponibles
+                                    $sql_municipios = "SELECT * FROM municipios";
+                                    $resultado_municipios = mysqli_query($conexion, $sql_municipios);
+                                    while ($fila_municipio = mysqli_fetch_assoc($resultado_municipios)) {
+                                        echo "<option value='{$fila_municipio['id_municipio']}'>{$fila_municipio['nombre_municipio']}</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Dirección" required>

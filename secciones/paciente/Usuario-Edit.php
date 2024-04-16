@@ -2,16 +2,20 @@
    
     session_start();
 
+    include('../../controladores/conexion.php');
+
     if (isset($_SESSION['id_rol']) && $_SESSION['id_rol'] == 3) { 
    
     } else {
         header("Location: index.php");
         exit;
     }
+
+    include "../../modelos/mostrar_info_usuario.php";
     ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -71,12 +75,12 @@ margin: 20px;
       <div class="d-flex flex-grow-1 collapse navbar-collapse ms-4" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="Usuario.html">
+            <a class="nav-link active text-light" aria-current="page" href="Usuario.php">
               <p class="fw-bolder">Mi Cuenta</p>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Email: anderhdz06@gmail.com</a>
+            <a class="nav-link active text-light" aria-current="page" href="#"><?php echo $email ?></a>
           </li>
 
         </ul>
@@ -98,10 +102,10 @@ margin: 20px;
 <body style=" background-color: #E4F2F1;">
 
   <div class="perf">
-    <img src="../../img/incog.png" alt="DR" class="  mt-4 "
-      style="height: 250px; width: auto;border-radius:121px; margin-left: 23%;">
+    <img src="../../<?php echo $nueva_foto_perfil ?>" alt="DR" class="  mt-4 "
+      style="height: 250px; width:250px;border-radius:121px; margin-left: 23%;">
     <div class="text-white mt-4 fw-bold fs-5" style="text-align: center; ;margin-bottom: 12%;">
-      <p>Juan Carlos Ramirez Perez</p>
+      <p><?php echo $nombre_paciente . " " . $apellido_paciente ?> </p>
     </div>
     <a href="CitasUser.php" style=" text-decoration: none; ">
       <p class="text-white fs-5 fw-light" style=" margin-top: 4%; text-align: center;">Mis Citas</p>
